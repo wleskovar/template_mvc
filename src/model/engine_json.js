@@ -37,7 +37,7 @@ const engine_json= {
     // este metodo permite borrar una columm de la table
     delete_columm: function(name_table, columm_table_id) {
         let file_string= this.read_json(name_table);
-        let file_new= file_string.filter( element => element.package_id != columm_table_id);
+        let file_new= file_string.filter( element => Object.values(element)[0] != columm_table_id);
         this.write_json(name_table, file_new);
     }, 
 
@@ -60,7 +60,7 @@ const engine_json= {
     */ 
     find_columm: function (name_table, columm_table_id){
         let file_string= this.read_json(name_table)
-        return file_string.filter( element => element.package_id == columm_table_id);
+        return file_string.filter( element => Object.values(element)[0] == columm_table_id);
     }
 };
 module.exports= engine_json

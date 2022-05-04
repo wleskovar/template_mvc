@@ -4,7 +4,7 @@ function l (arg) {
     console.log(arg);
 }
 
-let nuevo= {package_id:"45",
+let nuevo= {package_id:"4",
             package_name:"San Juan",
             package_image:"Bariloche300x200.webp",
             package_alt_image:"San Juan",
@@ -22,12 +22,15 @@ let nuevo= {package_id:"45",
         };
 
 //l(engine_json.browse_table('package'));
-//l(engine_json.read_columm('package', 1));
+l(engine_json.read_columm('package',5));
 /* Para dar el alta paso como parametros el nombre de la tabla y la nueva columna */
 //engine_json.add_columm('package', nuevo);
 //l('listo el alta');
-//engine_json.delete_columm('package', 2);
+//engine_json.delete_columm('package', 45);
 //l('listo la baja');
 //engine_json.edit_columm('package', 5, nuevo);
 //l(engine_json.browse_table('package'));
+
+// const {package_id: id , ...rest} = nuevo;
+//l((Object.values(objeto)[0]));
 
